@@ -7,7 +7,9 @@ class Point:
         return "<Point (x={self.x}, y={self.y})>".format(self=self)
 
     def __lt__(self, other):
-        return self.x < other.x and self.y < other.y
+        self_dist = (self.x ** 2 + self.y ** 2) ** 0.5
+        other_dist = (other.x ** 2 + other.y ** 2) ** 0.5
+        return self_dist < other_dist
 
     def __gt__(self, other):
         return self.x > other.x and self.y > other.y
