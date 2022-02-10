@@ -22,6 +22,7 @@ class Point:
         else:
             self.x += other.x
             self.y += other.y
+        return self
 
 p1 = Point(0, 0)
 p2 = Point(1, 3)
