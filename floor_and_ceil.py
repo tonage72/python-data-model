@@ -8,10 +8,15 @@ class Point:
     def __repr__(self) -> str:
         return "<Point (x={self.x}, y={self.y})>".format(self=self)
 
-    def __float__(self):
-        return float(self.x)
+    # def __floor__(self):
+    #     s = self.x + self.y
+    #     return floor(s)
 
-    #def __floor__(self):
-    #    return float(floor(self.x))
+    def __float__(self):
+        return self.x + self.y
+
+    #def __ceil__(self):
+    #    s = self.x + self.y
+    #    return ceil(s)
 
 p = Point(3.6, 2.7)
